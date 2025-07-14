@@ -1,0 +1,15 @@
+<!doctype html><html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+html,body{margin:0;height:100%}
+video{width:100vw;height:100vh;object-fit:cover}
+</style>
+<body onpointerdown="hide()">
+<video id="v" muted playsinline preload="auto" src="iphone.mov"></video>
+<script>
+let t; const IDLE = 30000; reset();
+function reset(){ clearTimeout(t); t = setTimeout(()=>v.play(), IDLE); }
+function hide(){ v.pause(); reset(); }
+</script>
+</body></html>
